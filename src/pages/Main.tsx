@@ -1,6 +1,7 @@
 import { BodyText, HeaderText, Link } from 'components/Text'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import FirstFiveCards from 'components/FirstFiveCards'
+import SearchTextfield from 'components/SearchTextfield'
 import classnames, {
   display,
   flexDirection,
@@ -63,6 +64,11 @@ export default function () {
         </BodyText>
         <BodyText>Now go get 'em, tiger! 🐯</BodyText>
         <ConnectButton accountStatus="address" />
+        <HeaderText>
+          Enter the username of a user you want to mint (or their FID) below to
+          go to their card!
+        </HeaderText>
+        <SearchTextfield />
         <HeaderText>
           The first 5 cards are below. You get to a user card by going to
           farcantasy.xyz/#/username_or_fid. Good luck!

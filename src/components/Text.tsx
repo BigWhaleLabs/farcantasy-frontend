@@ -34,7 +34,7 @@ const headerText = classnames(
   whiteText,
   fontSize('text-xl', 'md:text-2xl'),
   fontWeight('font-bold'),
-  margin('mb-8')
+  margin('mt-8', 'mb-6')
 )
 export function HeaderText({ children }: ChildrenProp) {
   return <p className={headerText}>{children}</p>
