@@ -9,8 +9,10 @@ import {
 } from 'wagmi'
 import Button from 'components/Button'
 import ERC721ABI from 'models/ERC721ABI'
+import classnames, { wordBreak } from 'classnames/tailwind'
 import env from 'helpers/env'
 
+const ownerAddress = classnames(wordBreak('break-all'))
 export default function ({ id }: { id: number }) {
   const { isConnected } = useAccount()
   const { data, isLoading, isError, error } = useContractRead({
@@ -45,7 +47,11 @@ export default function ({ id }: { id: number }) {
     return <BodyText>Couldn't load ownership info!</BodyText>
   }
   if (data) {
-    return <BodyText>Owner: {data}</BodyText>
+    return (
+      <BodyText>
+        Owner: <span className={ownerAddress}>{data}</span>
+      </BodyText>
+    )
   }
   if (isSuccess) {
     return <BodyText>Minted!</BodyText>
