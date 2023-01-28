@@ -1,11 +1,18 @@
 import { BodyText, Link } from 'components/Text'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { ethers } from 'ethers'
-import { useContractRead, useContractWrite, useWaitForTransaction } from 'wagmi'
+import {
+  useAccount,
+  useContractRead,
+  useContractWrite,
+  useWaitForTransaction,
+} from 'wagmi'
 import Button from 'components/Button'
 import ERC721ABI from 'models/ERC721ABI'
 import env from 'helpers/env'
 
 export default function ({ id }: { id: number }) {
+  const { isConnected } = useAccount()
   const { data, isLoading, isError, error } = useContractRead({
     abi: ERC721ABI,
     address: env.VITE_CONTRACT as `0x${string}`,
@@ -51,6 +58,9 @@ export default function ({ id }: { id: number }) {
         notified when the next batch of users enters the arena!
       </BodyText>
     )
+  }
+  if (!isConnected) {
+    return <ConnectButton accountStatus="address" />
   }
   return (
     <>
