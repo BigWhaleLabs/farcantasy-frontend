@@ -34,7 +34,7 @@ export default function () {
             <li>Mint costs 0.0065 ETH to avoid spam attacks</li>
             <li>
               Trade your Farcaster user cards{' '}
-              <Link href="https://opensea.io/assets/ethereum/ethereum/0x2bD8c9F0c485b910C11AB61Fd4145C4FEe31954D">
+              <Link href="https://opensea.io/collection/farcantasy">
                 on OpenSea
               </Link>
             </li>
