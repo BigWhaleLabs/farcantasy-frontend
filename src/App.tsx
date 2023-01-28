@@ -1,4 +1,4 @@
-import { Route, Router } from 'wouter'
+import { Link, Route, Router } from 'wouter'
 import { TitleText } from 'components/Text'
 import Card from 'pages/Card'
 import Main from 'pages/Main'
@@ -11,7 +11,9 @@ export default function () {
     <WalletProvider>
       <Router hook={useHashLocation}>
         <Root>
-          <TitleText>Farcantasy</TitleText>
+          <Link href="#/">
+            <TitleText>Farcantasy</TitleText>
+          </Link>
           <Route path="/" component={Main} />
           <Route path="/:usernameOrId" component={Card} />
         </Root>
