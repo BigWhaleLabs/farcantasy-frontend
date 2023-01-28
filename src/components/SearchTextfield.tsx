@@ -31,6 +31,7 @@ export default function () {
   return (
     <div className={container}>
       <input
+        placeholder="borodutch"
         className={textfield}
         type="text"
         onInput={({
