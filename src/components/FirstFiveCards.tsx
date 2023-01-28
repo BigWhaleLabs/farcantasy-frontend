@@ -5,6 +5,7 @@ import classnames, {
   flexWrap,
   gap,
   justifyContent,
+  margin,
 } from 'classnames/tailwind'
 
 const container = classnames(
@@ -12,7 +13,8 @@ const container = classnames(
   flexDirection('flex-row'),
   flexWrap('flex-wrap'),
   justifyContent('justify-center'),
-  gap('gap-4')
+  gap('gap-4'),
+  margin('mb-8')
 )
 export default function () {
   return (

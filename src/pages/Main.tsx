@@ -68,6 +68,22 @@ export default function () {
           farcantasy.xyz/#/username_or_fid. Good luck!
         </HeaderText>
         <FirstFiveCards />
+        <BodyText>
+          Oh, btw, the whole project is open source. Here's{' '}
+          <Link href="https://github.com/BigWhaleLabs/farcantasy-metadata">
+            the metadata backend
+          </Link>
+          ,{' '}
+          <Link href="https://github.com/BigWhaleLabs/farcantasy-frontend">
+            this frontend
+          </Link>{' '}
+          and{' '}
+          <Link href="https://github.com/BigWhaleLabs/farcantasy-contract/">
+            the contract
+          </Link>
+          . Made with love by{' '}
+          <Link href="https://fcast.me/borodutch">@borodutch</Link>!
+        </BodyText>
       </div>
     </>
   )
