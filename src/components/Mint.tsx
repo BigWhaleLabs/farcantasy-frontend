@@ -1,4 +1,4 @@
-import { BodyText } from 'components/Text'
+import { BodyText, Link } from 'components/Text'
 import { ethers } from 'ethers'
 import { useContractRead, useContractWrite, useWaitForTransaction } from 'wagmi'
 import Button from 'components/Button'
@@ -42,6 +42,15 @@ export default function ({ id }: { id: number }) {
   }
   if (isSuccess) {
     return <BodyText>Minted!</BodyText>
+  }
+  if (id > 1000) {
+    return (
+      <BodyText>
+        This user isn't up for sale yet! Follow{' '}
+        <Link href="https://fcast.me/borodutch">@borodutch</Link> to get
+        notified when the next batch of users enters the arena!
+      </BodyText>
+    )
   }
   return (
     <>
