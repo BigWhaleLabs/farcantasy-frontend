@@ -1,5 +1,6 @@
 import { BodyText, HeaderText, Link } from 'components/Text'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import Explorer from 'components/Explorer'
 import FirstFiveCards from 'components/FirstFiveCards'
 import SearchTextfield from 'components/SearchTextfield'
 import classnames, {
@@ -69,6 +70,8 @@ export default function () {
           go to their card!
         </HeaderText>
         <SearchTextfield />
+        <HeaderText>Explore the available cards!</HeaderText>
+        <Explorer />
         <HeaderText>
           The first 5 cards are below. You get to a user card by going to
           farcantasy.xyz/#/username_or_fid. Good luck!

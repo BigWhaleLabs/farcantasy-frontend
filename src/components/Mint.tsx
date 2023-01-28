@@ -11,6 +11,7 @@ import Button from 'components/Button'
 import ERC721ABI from 'models/ERC721ABI'
 import classnames, { wordBreak } from 'classnames/tailwind'
 import env from 'helpers/env'
+import idCap from 'helpers/idCap'
 
 const ownerAddress = classnames(wordBreak('break-all'))
 export default function ({ id }: { id: number }) {
@@ -56,7 +57,7 @@ export default function ({ id }: { id: number }) {
   if (isSuccess) {
     return <BodyText>Minted!</BodyText>
   }
-  if (id > 1000) {
+  if (id > idCap) {
     return (
       <BodyText>
         This user isn't up for sale yet! Follow{' '}
