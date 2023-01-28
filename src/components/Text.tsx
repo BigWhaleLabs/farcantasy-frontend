@@ -8,6 +8,7 @@ import {
   letterSpacing,
   margin,
   textColor,
+  textDecoration,
   textTransform,
 } from 'classnames/tailwind'
 import ChildrenProp from 'models/ChildrenProp'
@@ -31,8 +32,9 @@ export function TitleText({ children }: ChildrenProp) {
 
 const headerText = classnames(
   whiteText,
-  fontSize('text-3xl', 'md:text-6xl'),
-  fontWeight('font-bold')
+  fontSize('text-xl', 'md:text-2xl'),
+  fontWeight('font-bold'),
+  margin('mb-8')
 )
 export function HeaderText({ children }: ChildrenProp) {
   return <p className={headerText}>{children}</p>
@@ -41,4 +43,13 @@ export function HeaderText({ children }: ChildrenProp) {
 const bodyText = classnames(textColor('text-purple-200'), fontSize('text-lg'))
 export function BodyText({ children }: ChildrenProp) {
   return <p className={bodyText}>{children}</p>
+}
+
+const link = classnames(textDecoration('underline'))
+export function Link({ children, href }: { children: string; href: string }) {
+  return (
+    <a className={link} href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  )
 }
