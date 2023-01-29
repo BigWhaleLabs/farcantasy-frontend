@@ -23,6 +23,7 @@ import classnames, {
   textAlign,
 } from 'classnames/tailwind'
 import getUsers from 'helpers/getUsers'
+import idCap from 'helpers/idCap'
 
 const pageSize = 20
 
@@ -128,7 +129,7 @@ export default function () {
         />
         <Button
           onClick={() => setPage(page + 1)}
-          disabled={page >= 2000 / 20 - 1}
+          disabled={page >= (idCap + 1000) / 20 - 1}
           title=">"
         />
       </div>

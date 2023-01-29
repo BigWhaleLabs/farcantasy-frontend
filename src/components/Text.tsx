@@ -46,9 +46,22 @@ export function BodyText({ children }: ChildrenProp) {
 }
 
 const link = classnames(textDecoration('underline'))
-export function Link({ children, href }: { children: string; href: string }) {
+export function Link({
+  children,
+  href,
+  noTarget,
+}: {
+  children: string
+  href: string
+  noTarget?: boolean
+}) {
   return (
-    <a className={link} href={href} target="_blank" rel="noopener noreferrer">
+    <a
+      className={link}
+      href={href}
+      target={noTarget ? undefined : '_blank'}
+      rel="noopener noreferrer"
+    >
       {children}
     </a>
   )

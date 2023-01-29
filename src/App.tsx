@@ -1,5 +1,6 @@
 import { Route, Router } from 'wouter'
 import { TitleText } from 'components/Text'
+import Arena from 'pages/Arena'
 import Card from 'pages/Card'
 import Main from 'pages/Main'
 import Root from 'components/Root'
@@ -15,7 +16,12 @@ export default function () {
             <TitleText>Farcantasy</TitleText>
           </a>
           <Route path="/" component={Main} />
-          <Route path="/:usernameOrId" component={Card} />
+          <Route path="/arena" component={Arena} />
+          <Route path="/:usernameOrId">
+            {({ usernameOrId }: { usernameOrId: string }) =>
+              usernameOrId !== 'arena' && <Card />
+            }
+          </Route>
         </Root>
       </Router>
     </WalletProvider>
