@@ -128,13 +128,13 @@ export default function () {
         />
         <Button
           onClick={() => setPage(page + 1)}
-          disabled={page >= 49}
+          disabled={page >= 2000 / 20 - 1}
           title=">"
         />
       </div>
       <SuspenseWithError
         fallback={<Loading text="Loading cards..." />}
-        errorText="Failed to load the cards, try again later? Here's the error"
+        errorText="Failed to load the cards, try again later? Or maybe try with VPN?"
       >
         <ExplorerSuspended />
       </SuspenseWithError>

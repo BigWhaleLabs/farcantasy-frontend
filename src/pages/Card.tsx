@@ -64,7 +64,7 @@ export default function () {
   return (
     <SuspenseWithError
       fallback={<Loading text="Loading the user..." />}
-      errorText="Failed to load the user, does this user exist? Here's the error"
+      errorText="Failed to load the user, does this user exist?"
     >
       <CardSuspended />
     </SuspenseWithError>
