@@ -45,9 +45,10 @@ export default function () {
           <li>
             You can mint low-stats users to re-sell later if they are promising
           </li>
+          <li>Every 1000 Farcaster users represent a season</li>
           <li>
-            Initially, only the first 1000 users are available — hurry to get
-            yours until they are all gone!
+            Only the first 2 seasons are available for now — hurry to get yours
+            until they are all gone!
           </li>
           <li>
             More cards will be released in the future, follow{' '}
