@@ -114,7 +114,7 @@ const buttonRow = classnames(
   padding('px-4', 'py-2')
 )
 export default function () {
-  const [page, setPage] = useState(50)
+  const [page, setPage] = useState(idCap / 20)
   useEffect(() => {
     state.users = getUsers(page * pageSize, pageSize)
   }, [page])
