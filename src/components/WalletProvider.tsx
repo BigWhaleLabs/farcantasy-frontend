@@ -12,8 +12,8 @@ import {
   useAccount,
   useEnsName,
 } from 'wagmi'
+import { goerli, mainnet } from 'wagmi/chains'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
-import { mainnet } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
 
 import ChildrenProp from 'models/ChildrenProp'
@@ -21,7 +21,7 @@ import WalletContext from 'context/WalletContext'
 import env from 'helpers/env'
 
 const { chains, provider } = configureChains(
-  [mainnet],
+  [env.isDevelopment ? goerli : mainnet],
   [
     jsonRpcProvider({
       rpc: () => ({
