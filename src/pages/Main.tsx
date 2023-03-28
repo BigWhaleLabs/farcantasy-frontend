@@ -10,6 +10,7 @@ import classnames, {
   listStylePosition,
   listStyleType,
 } from 'classnames/tailwind'
+import env from 'helpers/env'
 
 const textContainer = classnames(
   display('flex'),
@@ -34,7 +35,13 @@ export default function () {
           <li>Mint costs 0.0065 ETH to avoid spam attacks</li>
           <li>
             Trade your Farcaster user cards{' '}
-            <Link href="https://opensea.io/collection/farcantasy">
+            <Link
+              href={
+                env.VITE_ENVIRONMENT === 'development'
+                  ? 'https://testnets.opensea.io/collection/farcantasy'
+                  : 'https://opensea.io/collection/farcantasy'
+              }
+            >
               on OpenSea
             </Link>
           </li>
