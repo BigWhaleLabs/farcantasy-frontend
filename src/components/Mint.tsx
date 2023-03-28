@@ -61,7 +61,7 @@ export default function ({ id }: { id: number }) {
     return (
       <BodyText>
         This user isn't up for sale yet! Follow{' '}
-        <Link href="https://fcast.me/borodutch">@borodutch</Link> to get
+        <Link href="https://warpcast.com/borodutch">@borodutch</Link> to get
         notified when the next batch of users enters the arena!
       </BodyText>
     )

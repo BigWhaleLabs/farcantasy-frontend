@@ -21,7 +21,7 @@ import WalletContext from 'context/WalletContext'
 import env from 'helpers/env'
 
 const { chains, provider } = configureChains(
-  [env.isDevelopment ? goerli : mainnet],
+  [env.VITE_ENVIRONMENT === 'development' ? goerli : mainnet],
   [
     jsonRpcProvider({
       rpc: () => ({

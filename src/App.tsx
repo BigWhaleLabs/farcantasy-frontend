@@ -5,6 +5,7 @@ import Card from 'pages/Card'
 import Main from 'pages/Main'
 import Root from 'components/Root'
 import WalletProvider from 'components/WalletProvider'
+import env from 'helpers/env'
 import useHashLocation from 'hooks/useHashLocation'
 
 export default function () {
@@ -13,7 +14,10 @@ export default function () {
       <Router hook={useHashLocation}>
         <Root>
           <a href="#/">
-            <TitleText>Farcantasy</TitleText>
+            <TitleText>
+              Farcantasy
+              {env.VITE_ENVIRONMENT === 'development' ? ' (test)' : ''}
+            </TitleText>
           </a>
           <Route path="/" component={Main} />
           <Route path="/arena" component={Arena} />

@@ -52,7 +52,7 @@ export default function () {
           </li>
           <li>
             More cards will be released in the future, follow{' '}
-            <Link href="https://fcast.me/borodutch">@borodutch</Link> for
+            <Link href="https://warpcast.com/borodutch">@borodutch</Link> for
             updates
           </li>
           <li>
@@ -98,7 +98,7 @@ export default function () {
           the contract
         </Link>
         . Made with love by{' '}
-        <Link href="https://fcast.me/borodutch">@borodutch</Link>!
+        <Link href="https://warpcast.com/borodutch">@borodutch</Link>!
       </BodyText>
     </div>
   )
